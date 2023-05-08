@@ -1,4 +1,5 @@
-/repos/UCOSII/cmake-build-debug/CMakeFiles/uCOS-II.dir
-/repos/UCOSII/cmake-build-debug/CMakeFiles/ucosii.dir
-/repos/UCOSII/cmake-build-debug/CMakeFiles/edit_cache.dir
-/repos/UCOSII/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/lsc/repo/UCOSII_STM32/cmake-build-debug/CMakeFiles/ucos_stm32.elf.dir
+/home/lsc/repo/UCOSII_STM32/cmake-build-debug/CMakeFiles/ucos_stm32.bin.dir
+/home/lsc/repo/UCOSII_STM32/cmake-build-debug/CMakeFiles/flash.dir
+/home/lsc/repo/UCOSII_STM32/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/lsc/repo/UCOSII_STM32/cmake-build-debug/CMakeFiles/rebuild_cache.dir
