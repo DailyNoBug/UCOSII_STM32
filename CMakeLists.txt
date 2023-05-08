@@ -9,10 +9,10 @@ set(STARTUP_FILE ${CMAKE_CURRENT_SOURCE_DIR}/User/startup_stm32f401xe.s)
 set(ASM_FILE ${CMAKE_CURRENT_SOURCE_DIR}/Ports/src/os_cpu_a.asm)
 # 添加链接器脚本文件
 set(LINKER_SCRIPT ${CMAKE_CURRENT_SOURCE_DIR}/User/stm32f401ret6.ld)
-include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Cfg/
-                    ${CMAKE_CURRENT_SOURCE_DIR}/Ports/inc/
-                    ${CMAKE_CURRENT_SOURCE_DIR}/Source/
-                    ${CMAKE_CURRENT_SOURCE_DIR}/User/inc/
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/Cfg
+                    ${CMAKE_CURRENT_SOURCE_DIR}/Ports/inc
+                    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+                    ${CMAKE_CURRENT_SOURCE_DIR}/User/inc
         )
 # 添加源文件
 file(GLOB SOURCE_FILES  "${CMAKE_CURRENT_SOURCE_DIR}/Source/*.c"
@@ -43,4 +43,6 @@ target_link_libraries(${PROJECT_NAME}.elf -Wl,-Map=${PROJECT_NAME}.map -Wl,--gc-
 # 添加目标文件
 add_custom_target(${PROJECT_NAME}.bin ALL DEPENDS ${PROJECT_NAME}.elf COMMAND arm-none-eabi-objcopy -Obinary ${PROJECT_NAME}.elf ${PROJECT_NAME}.bin)
 # 烧录程序
-add_custom_target(flash COMMAND st-flash --debug write ${PROJECT_NAME}.bin 0x08000000 WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+add_custom_target(flash COMMAND st-flash write ${PROJECT_NAME}.bin 0x08000000 WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+# flash的时候加上debug的参数
+add_custom_target(openocd COMMAND openocd -f interface/stlink-v2.cfg -f target/stm32f4x.cfg -c init -c "reset halt" -c "flash write_image erase ${PROJECT_NAME}.bin 0x08000000" -c "reset" -c shutdown WORKING_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
