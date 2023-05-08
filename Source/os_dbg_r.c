@@ -156,77 +156,77 @@ INT16U  const  OSTmrWheelTblSize     = 0u;
 #if OS_DEBUG_EN > 0u
 
 INT16U  const  OSDataSize = sizeof(OSCtxSwCtr)
-#if (OS_EVENT_EN) && (OS_MAX_EVENTS > 0u)
-                          + sizeof(OSEventFreeList)
-                          + sizeof(OSEventTbl)
-#endif
+                            #if (OS_EVENT_EN) && (OS_MAX_EVENTS > 0u)
+                            + sizeof(OSEventFreeList)
+                            + sizeof(OSEventTbl)
+                            #endif
 
-#if (OS_FLAG_EN > 0u) && (OS_MAX_FLAGS > 0u)
-                          + sizeof(OSFlagTbl)
-                          + sizeof(OSFlagFreeList)
-#endif
+                            #if (OS_FLAG_EN > 0u) && (OS_MAX_FLAGS > 0u)
+                            + sizeof(OSFlagTbl)
+                            + sizeof(OSFlagFreeList)
+                            #endif
 
-#if OS_TASK_STAT_EN > 0u
-                          + sizeof(OSCPUUsage)
-                          + sizeof(OSIdleCtrMax)
-                          + sizeof(OSIdleCtrRun)
-                          + sizeof(OSStatRdy)
-                          + sizeof(OSTaskStatStk)
-#endif
+                            #if OS_TASK_STAT_EN > 0u
+                            + sizeof(OSCPUUsage)
+                            + sizeof(OSIdleCtrMax)
+                            + sizeof(OSIdleCtrRun)
+                            + sizeof(OSStatRdy)
+                            + sizeof(OSTaskStatStk)
+                            #endif
 
-#if OS_TICK_STEP_EN > 0u
-                          + sizeof(OSTickStepState)
-#endif
+                            #if OS_TICK_STEP_EN > 0u
+                            + sizeof(OSTickStepState)
+                            #endif
 
-#if (OS_MEM_EN > 0u) && (OS_MAX_MEM_PART > 0u)
-                          + sizeof(OSMemFreeList)
-                          + sizeof(OSMemTbl)
-#endif
+                            #if (OS_MEM_EN > 0u) && (OS_MAX_MEM_PART > 0u)
+                            + sizeof(OSMemFreeList)
+                            + sizeof(OSMemTbl)
+                            #endif
 
-#ifdef OS_SAFETY_CRITICAL_IEC61508
-                          + sizeof(OSSafetyCriticalStartFlag)
-#endif
+                            #ifdef OS_SAFETY_CRITICAL_IEC61508
+                            + sizeof(OSSafetyCriticalStartFlag)
+                            #endif
 
-#if (OS_Q_EN > 0u) && (OS_MAX_QS > 0u)
-                          + sizeof(OSQFreeList)
-                          + sizeof(OSQTbl)
-#endif
+                            #if (OS_Q_EN > 0u) && (OS_MAX_QS > 0u)
+                            + sizeof(OSQFreeList)
+                            + sizeof(OSQTbl)
+                            #endif
 
-#if OS_TASK_REG_TBL_SIZE > 0u
-                          + sizeof(OSTaskRegNextAvailID)
-#endif
+                            #if OS_TASK_REG_TBL_SIZE > 0u
+                            + sizeof(OSTaskRegNextAvailID)
+                            #endif
 
-#if OS_TIME_GET_SET_EN > 0u
-                          + sizeof(OSTime)
-#endif
+                            #if OS_TIME_GET_SET_EN > 0u
+                            + sizeof(OSTime)
+                            #endif
 
-#if (OS_TMR_EN > 0u) && (OS_TMR_CFG_MAX > 0u)
-                          + sizeof(OSTmrFree)
-                          + sizeof(OSTmrUsed)
-                          + sizeof(OSTmrTime)
-                          + sizeof(OSTmrSem)
-                          + sizeof(OSTmrSemSignal)
-                          + sizeof(OSTmrTbl)
-                          + sizeof(OSTmrFreeList)
-                          + sizeof(OSTmrTaskStk)
-                          + sizeof(OSTmrWheelTbl)
-#endif
-                          + sizeof(OSIntNesting)
-                          + sizeof(OSLockNesting)
-                          + sizeof(OSPrioCur)
-                          + sizeof(OSPrioHighRdy)
-                          + sizeof(OSRdyGrp)
-                          + sizeof(OSRdyTbl)
-                          + sizeof(OSRunning)
-                          + sizeof(OSTaskCtr)
-                          + sizeof(OSIdleCtr)
-                          + sizeof(OSTaskIdleStk)
-                          + sizeof(OSTCBCur)
-                          + sizeof(OSTCBFreeList)
-                          + sizeof(OSTCBHighRdy)
-                          + sizeof(OSTCBList)
-                          + sizeof(OSTCBPrioTbl)
-                          + sizeof(OSTCBTbl);
+                            #if (OS_TMR_EN > 0u) && (OS_TMR_CFG_MAX > 0u)
+                            + sizeof(OSTmrFree)
+                            + sizeof(OSTmrUsed)
+                            + sizeof(OSTmrTime)
+                            + sizeof(OSTmrSem)
+                            + sizeof(OSTmrSemSignal)
+                            + sizeof(OSTmrTbl)
+                            + sizeof(OSTmrFreeList)
+                            + sizeof(OSTmrTaskStk)
+                            + sizeof(OSTmrWheelTbl)
+                            #endif
+                            + sizeof(OSIntNesting)
+                            + sizeof(OSLockNesting)
+                            + sizeof(OSPrioCur)
+                            + sizeof(OSPrioHighRdy)
+                            + sizeof(OSRdyGrp)
+                            + sizeof(OSRdyTbl)
+                            + sizeof(OSRunning)
+                            + sizeof(OSTaskCtr)
+                            + sizeof(OSIdleCtr)
+                            + sizeof(OSTaskIdleStk)
+                            + sizeof(OSTCBCur)
+                            + sizeof(OSTCBFreeList)
+                            + sizeof(OSTCBHighRdy)
+                            + sizeof(OSTCBList)
+                            + sizeof(OSTCBPrioTbl)
+                            + sizeof(OSTCBTbl);
 
 #endif
 
