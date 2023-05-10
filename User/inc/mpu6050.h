@@ -7,6 +7,7 @@
 #pragma once
 #include "stm32f401ret6.h"
 #include "iic.h"
+
 #define MPU6050_ADDR 0xD0
 #define SMPLRT_DIV_REG 0x19
 #define GYRO_CONFIG_REG 0x1B
@@ -22,4 +23,5 @@ void MPU6050_Init();
 void MPU6050_Read_Accel (void);
 void MPU6050_Read_Gyro (void);
 void MPU6050_Read_temp(void);
+void MPU6050_Read(void);
 #endif //STM32_REGISTER_MPU6050_H

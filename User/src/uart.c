@@ -3,6 +3,8 @@
 //
 #include "uart.h"
 GPIO_InitTypeDef UART_Initstruct;
+extern float Ax,Ay,Az,Gx,Gy,Gz,temp;
+
 void UART1_GPIOInit(){
     /*
      * PA9 -> TX
@@ -61,7 +63,34 @@ void USART_Init(USART_TypeDef *UARTx , uint32_t bound,uint32_t pclk){
     UARTx -> CR1 |= 1<<13;  //USART enabled
     //enable TE RE bit
 }
+
+//send char through usartx
 void USART_SendChar(USART_TypeDef *USARTx,char c){
     while((USARTx->SR & 0x80)==0){}
     USARTx->DR = (uint8_t)c;
+}
+
+//send string through usartx
+void USART_SendStr(USART_TypeDef *USARTx,char *s){
+    int len= strlen(s);
+    for(int i=0;i<len;i++){
+        while((USARTx->SR & 0x80)==0){}
+        USARTx->DR = (uint8_t)s[i];
+    }
+}
+
+void transGY86Data(void){
+//    char st[64];
+//    memset(st,0,sizeof (st));
+//    sprintf(st,"Accel: %f %f %f\n",Ax,Ay,Az);
+//    USART_SendStr(USART6,st);
+//    memset(st,0,sizeof (st));
+//    sprintf(st,"Gyro: %f %f %f\n",Gx,Gy,Gz);
+//    USART_SendStr(USART6,st);
+//    memset(st,0,sizeof (st));
+//    sprintf(st,"Temp: %f\n",temp);
+//    USART_SendStr(USART6,st);
+//    OSTimeDly(1000);
+    USART_SendChar(USART1,'r');
+    OSTimeDly(1000);
 }

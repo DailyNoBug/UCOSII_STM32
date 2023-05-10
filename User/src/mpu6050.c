@@ -10,7 +10,7 @@ uint16_t Gyro_X_RAW = 0;
 uint16_t Gyro_Y_RAW = 0;
 uint16_t Gyro_Z_RAW = 0;
 
-float Ax, Ay, Az, Gx, Gy, Gz;
+float Ax, Ay, Az, Gx, Gy, Gz, temp;
 
 uint8_t check;
 void MPU_Write (uint8_t Address, uint8_t Reg, uint8_t Data)
@@ -97,15 +97,20 @@ void MPU6050_Read_Gyro (void)
     Accel_Y_RAW = (uint16_t)(Rx_data[2] << 8 | Rx_data [3]);
     Accel_Z_RAW = (uint16_t)(Rx_data[4] << 8 | Rx_data [5]);
 
-    Ax = Accel_X_RAW;
-    Ay = Accel_Y_RAW;
-    Az = Accel_Z_RAW;
+    Gx = Accel_X_RAW;
+    Gy = Accel_Y_RAW;
+    Gz = Accel_Z_RAW;
 }
 void MPU6050_Read_temp(void)
 {
     uint8_t Rx_data[2];
     MPU_Read (MPU6050_ADDR, TEMP_OUT_H_REG, Rx_data, 2);
     Accel_X_RAW = (uint16_t)(Rx_data[0]<<8 | Rx_data[1]);
-    Ax = Accel_X_RAW;
+    temp = Accel_X_RAW;
 
+}
+void MPU6050_Read(void){
+    MPU6050_Read_Accel();
+    MPU6050_Read_Gyro();
+    MPU6050_Read_temp();
 }

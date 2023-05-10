@@ -38,7 +38,7 @@ void TIM_UnLock(){
     PWM_All(1000);
     for(int i=1;i<=30000000;i++);
     PWM_All(1100);
-    for (int i=1;i<=10000000;i++);
+    for (int i=1;i<=30000000;i++);
     PWM_All(1000);
 }
 void PWM_All(uint32_t x){
