@@ -23,12 +23,17 @@ void REV_TIM_Init(void){
     NVIC_ISER1 |= 1<<28;
     //CH1启动输入捕获，捕获上升沿信号
     TIM2->CCER |= 1<<0;
+    NVIC_SetPriority(TIM2_IRQn,0);
+    NVIC_EnableIRQ(TIM2_IRQn);
     //开启定时器
     TIM2->CR1 |= 1<<0;
 }
 uint16_t data[9];
 uint8_t  PPM_CH=0;
 void TIM2_IRQHandler(void){
+//    OS_CPU_SR cpu_sr;
+//    OS_ENTER_CRITICAL();
+//    OSIntEnter();
 //    printf("111111111:   %d\n",TIM2->CCR1);
     if(TIM2->CCR1>7000||PPM_CH==9){
         PPM_CH = 0;
@@ -36,4 +41,6 @@ void TIM2_IRQHandler(void){
         data[++PPM_CH] = TIM2->CCR1;
     }
     TIM2->CNT=0;
+//    OS_EXIT_CRITICAL();
+//    OSIntExit();
 }

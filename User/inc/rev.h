@@ -6,6 +6,8 @@
 #define STM32_REGISTER_REV_H
 #pragma once
 #include "stm32f401ret6.h"
+#include "ucos_ii.h"
+#include "NVIC.h"
 void REV_TIM_Init(void);
 void TIM2_IRQHandler(void);
 #endif //STM32_REGISTER_REV_H
