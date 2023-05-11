@@ -1,3 +1,10 @@
 # UCOSII FOR STM32F401RET6
-将ucosii 移植到STM32F401RET6的核心版上
-目前移植进度：能多任务跑起来了（
+目前进度：
+已经完成了相关代码的集成
+如何构建：
+```shell
+cd cmake-build-debug
+cmake ..
+make -j
+make openocd
+```
