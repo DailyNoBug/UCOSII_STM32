@@ -144,7 +144,7 @@ void  App_TaskDelHook (OS_TCB *ptcb)
 #if OS_VERSION >= 251
 void  App_TaskIdleHook (void)
 {
-    USART_SendStr(USART1,"[SWITCH] TaskIdle\n");
+//    USART_SendStr(USART1,"[SWITCH] TaskIdle\n");
 }
 #endif
 
