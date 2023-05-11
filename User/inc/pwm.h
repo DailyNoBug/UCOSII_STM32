@@ -7,6 +7,7 @@
 #pragma once
 #include "stm32f401ret6.h"
 #include "gpio.h"
+#include "uart.h"
 void TIM_Init(uint16_t arr,uint16_t psc);
 void TIM_UnLock();
 void PWM_All(uint32_t x);

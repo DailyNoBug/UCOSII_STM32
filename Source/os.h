@@ -29,7 +29,7 @@
 #define   OS_H
 
 #include  "ucos_ii.h"
-
+#include "uart.h"
 
 typedef  INT8U  OS_ERR;
 

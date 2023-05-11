@@ -32,13 +32,16 @@ void TIM_Init(uint16_t arr,uint16_t psc){
 }
 void TIM_UnLock(){
     PWM_All(2000);
+    USART_SendStr(USART1,"[MENTOR] send max singal\n");
 //    printf("1\n");
-    for(int i=1;i<=30000000;i++);
+    for(int i=1;i<=10000000;i++);
 //    printf("2\n");
+    USART_SendStr(USART1,"[MENTOR] send min singal\n");
     PWM_All(1000);
-    for(int i=1;i<=30000000;i++);
+    for(int i=1;i<=20000000;i++);
+    USART_SendStr(USART1,"[MENTOR] test mentor\n");
     PWM_All(1100);
-    for (int i=1;i<=30000000;i++);
+    for (int i=1;i<=5000000;i++);
     PWM_All(1000);
 }
 void PWM_All(uint32_t x){

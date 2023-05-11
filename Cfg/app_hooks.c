@@ -144,6 +144,7 @@ void  App_TaskDelHook (OS_TCB *ptcb)
 #if OS_VERSION >= 251
 void  App_TaskIdleHook (void)
 {
+    USART_SendStr(USART1,"[SWITCH] TaskIdle\n");
 }
 #endif
 
@@ -206,7 +207,7 @@ void  App_TaskReturnHook (OS_TCB  *ptcb)
 #if OS_TASK_SW_HOOK_EN > 0
 void  App_TaskSwHook (void)
 {
-
+//    USART_SendStr(USART1,"[INFO]Task Switch\n");
 }
 #endif
 
@@ -247,7 +248,8 @@ void  App_TCBInitHook (OS_TCB *ptcb)
 #if OS_TIME_TICK_HOOK_EN > 0
 void  App_TimeTickHook (void)
 {
-
+//    USART_SendChar(USART1,'n');
+//    USART_SendStr(USART1,"[INFO] TickHook\n");
 }
 #endif
 #endif
