@@ -29,8 +29,8 @@ set(CMAKE_ASM_COMPILER arm-none-eabi-gcc)
 set(CMAKE_LINKER arm-none-eabi-ld)
 
 # 设置编译选项
-set(CMAKE_C_FLAGS "-mthumb -mcpu=cortex-m4 -std=c99 -g -Os -ffunction-sections -fdata-sections -Wall -Wextra -Wno-error")
-set(CMAKE_CXX_FLAGS "-mthumb -mcpu=cortex-m4 -std=gnu++17 -g -Os -ffunction-sections -fdata-sections -Wall -Wextra")
+set(CMAKE_C_FLAGS "-mthumb -mcpu=cortex-m4 -std=c99 -g -O0 -ffunction-sections -fdata-sections -Wall -Wextra -Wno-error")
+set(CMAKE_CXX_FLAGS "-mthumb -mcpu=cortex-m4 -std=gnu++17 -g -O0 -ffunction-sections -fdata-sections -Wall -Wextra")
 set(CMAKE_ASM_FLAGS "-mthumb -mcpu=cortex-m4 -g -x assembler-with-cpp")
 
 # 设置链接选项
