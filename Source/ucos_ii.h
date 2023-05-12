@@ -244,6 +244,7 @@ extern "C" {
 *                                             ERROR CODES
 *********************************************************************************************************
 */
+typedef INT8U OS_ERR;
 #define OS_ERR_NONE                     0u
 
 #define OS_ERR_EVENT_TYPE               1u

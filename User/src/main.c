@@ -15,6 +15,7 @@ extern float Ax,Ay,Az;
 extern float Gx,Gy,Gz;
 extern float temp;
 extern uint16_t data[9];
+OS_ERR os_err;
 #define TASK_STACK_SIZE 1024
 OS_STK TIME_INIT_STACK[TASK_STACK_SIZE];
 #define TIME_INIT_PRIO 3
@@ -76,7 +77,7 @@ int main(){
     TIM_Init(19999,41);
     USART_SendStr(USART1,"[INFO] TIM init\n");
     TIM_UnLock();
-    USART_SendStr(USART1,"[INFO] MENTOR unlock\n");
+    USART_SendStr(USART1,"[INFO] MOTOR unlock\n");
     REV_TIM_Init();
     USART_SendStr(USART1,"[INFO] Reciver TIM init\n");
     MPU6050_Init();
@@ -85,23 +86,16 @@ int main(){
     OSInit();
     delay_init();
     USART_SendStr(USART1,"OS init\n");
-    OSTaskCreate(TIME_INIT, (void *)0, &TIME_INIT_STACK[TASK_STACK_SIZE - 1], TIME_INIT_PRIO);
-    USART_SendStr(USART1,"TIME INIT TASK Created\n");
+//    OSTaskCreate(TIME_INIT, (void *)0, &TIME_INIT_STACK[TASK_STACK_SIZE - 1], TIME_INIT_PRIO);
+//    USART_SendStr(USART1,"TIME INIT TASK Created\n");
     OSTaskCreate(IMU_TASK,(void *)0,&IMU_TASK_STACK[TASK_STACK_SIZE-1],IMU_TASK_PRIO);
+    OSTaskNameSet(IMU_TASK_PRIO,(uint8_t *)"IMU",&os_err);
     USART_SendStr(USART1,"IMU Task Created\n");
     OSTaskCreate(ULOG_TASK,(void *)0,&ULOG_TASK_STACK[TASK_STACK_SIZE-1],ULOG_TASK_PRIO);
+    OSTaskNameSet(ULOG_TASK_PRIO,(uint8_t *)"LOG",&os_err);
     USART_SendStr(USART1,"SerialTask Created\n");
     OSTaskCreate(MOTOR_TASK,(void *)0,&MOTOR_TASK_STACK[TASK_STACK_SIZE-1],MOTOR_TASK_PRIO);
+    OSTaskNameSet(MOTOR_TASK_PRIO,(uint8_t *)"motor",&os_err);
     USART_SendStr(USART1,"PWM Task Created\n");
     OSStart();
-//    while(1){
-//
-//        for(int i=1;i<=8;i++)
-//        {
-//            printf("%d        %d\n",i,data[i]);
-//        }
-
-//        for(int i=1;i<=10000000;i++);
-
-//    }
 }

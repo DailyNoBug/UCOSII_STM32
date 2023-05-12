@@ -20,9 +20,10 @@ void TIME_INIT(void) {
 void IMU_TASK(void){
     while(1){
         MPU6050_Read();
-        OSTimeDlyHMSM(0,0,0,25);
+        OSTimeDlyHMSM(0,0,0,20);
     }
 }
+
 void ULOG_TASK(void){
     char buffer[128];
     while(1){
@@ -35,6 +36,7 @@ void ULOG_TASK(void){
         OSTimeDlyHMSM(0,0,1,0);
     }
 }
+
 void MOTOR_TASK(void){
     while(1){
         if(data[7]>1200&&data[7]){
@@ -47,6 +49,6 @@ void MOTOR_TASK(void){
         else{
             PWM_All(3000-data[2]);
         }
-        OSTimeDlyHMSM(0,0,0,25);
+        OSTimeDlyHMSM(0,0,0,20);
     }
 }
