@@ -4,7 +4,6 @@
 #include "uart.h"
 GPIO_InitTypeDef UART_Initstruct;
 extern float Ax,Ay,Az,Gx,Gy,Gz,temp;
-
 void UART1_GPIOInit(){
     /*
      * PA9 -> TX

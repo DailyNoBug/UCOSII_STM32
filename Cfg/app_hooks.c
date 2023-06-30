@@ -205,8 +205,15 @@ void  App_TaskReturnHook (OS_TCB  *ptcb)
 */
 
 #if OS_TASK_SW_HOOK_EN > 0
+OS_TCB * prevTask;
+OS_TCB * nextTask;
+#include "QLMonitor.h"
 void  App_TaskSwHook (void)
 {
+    prevTask = OSTCBCur;
+    nextTask = OSTCBHighRdy;
+//    StoreSwInfo();
+    SendSwInfo();
 //    USART_SendStr(USART1,"[INFO]Task Switch\n");
 }
 #endif

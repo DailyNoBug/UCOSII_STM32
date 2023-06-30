@@ -18,4 +18,5 @@ void USART_Init(USART_TypeDef *UARTx , uint32_t bound,uint32_t pclk);
 void USART_SendChar(USART_TypeDef *USARTx,char c);
 void USART_SendStr(USART_TypeDef *USARTx,char *s);
 void transGY86Data(void);
+void USART_SendTick(USART_TypeDef *USARTx,int Tick);
 #endif //STM32_REGISTER_UART_H

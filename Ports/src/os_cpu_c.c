@@ -625,6 +625,8 @@ void  OSTimeTickHook (void)
 
 #if OS_TMR_EN > 0u
     OSTmrCtr++;
+#include "QLMonitor.h"
+    SetTickNum(OSTmrCtr);
     if (OSTmrCtr >= (OS_TICKS_PER_SEC / OS_TMR_CFG_TICKS_PER_SEC)) {
         OSTmrCtr = 0u;
         OSTmrSignal();

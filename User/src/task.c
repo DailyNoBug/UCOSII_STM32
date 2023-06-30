@@ -14,13 +14,21 @@ void delay_init(void)
     NVIC_SetPriority (SysTick_IRQn, (1UL << __NVIC_PRIO_BITS) - 1UL);
 }
 void TIME_INIT(void) {
-    USART_SendStr(USART1,"[SWITCH] First Task\n");
+    USART_SendStr(USART6,"[SWITCH] First Task\n");
     delay_init();
 }
 void IMU_TASK(void){
     while(1){
+        OS_CPU_SR cpu_sr;
+        OS_ENTER_CRITICAL();
+        OSIntEnter();
+        OSSchedLock();
         MPU6050_Read();
-        OSTimeDlyHMSM(0,0,0,20);
+        OSSchedUnlock();
+        OS_EXIT_CRITICAL();
+        OSIntExit();
+//        OSTimeDly(60);
+        OSTimeDlyHMSM(0,0,0,100);
     }
 }
 
@@ -29,10 +37,10 @@ void ULOG_TASK(void){
     while(1){
         memset(buffer,0,sizeof(buffer));
         sprintf(buffer,"Accel: %f %f %f\n Gyro: %f %f %f\n Temp: %f\n",Ax,Ay,Az,Gx,Gy,Gz,temp);
-        USART_SendStr(USART1,buffer);
+        USART_SendStr(USART6,buffer);
         memset(buffer,0,sizeof(buffer));
         sprintf(buffer,"[DATA] raw1: %d\n[DATA] raw2: %d\n[DATA] raw3: %d\n[DATA] raw4: %d\n[DATA] raw5: %d\n[DATA] raw6: %d\n[DATA] raw7: %d\n[DATA] raw8: %d\n",data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8]);
-        USART_SendStr(USART1,buffer);
+        USART_SendStr(USART6,buffer);
         OSTimeDlyHMSM(0,0,1,0);
     }
 }
@@ -49,6 +57,14 @@ void MOTOR_TASK(void){
         else{
             PWM_All(3000-data[2]);
         }
+        OSTimeDlyHMSM(0,0,0,20);
+    }
+}
+extern char finnal[2048];
+void MONITOR_TASK(void){
+    while (1){
+        USART_SendStr(USART1,finnal);
+        memset(finnal,0,sizeof (finnal));
         OSTimeDlyHMSM(0,0,0,20);
     }
 }
