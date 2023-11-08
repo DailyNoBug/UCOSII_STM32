@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ucos_stm32"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ucos_stm32.elf">
+				<Option output="E:/repo/UCOSII_STM32/cmake-build-debug/ucos_stm32.elf.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/repo/UCOSII_STM32/Cfg"/>
+					<Add directory="E:/repo/UCOSII_STM32/Ports/inc"/>
+					<Add directory="E:/repo/UCOSII_STM32/Source"/>
+					<Add directory="E:/repo/UCOSII_STM32/User/inc"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 ucos_stm32.elf"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ucos_stm32.elf/fast">
+				<Option output="E:/repo/UCOSII_STM32/cmake-build-debug/ucos_stm32.elf.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/repo/UCOSII_STM32/Cfg"/>
+					<Add directory="E:/repo/UCOSII_STM32/Ports/inc"/>
+					<Add directory="E:/repo/UCOSII_STM32/Source"/>
+					<Add directory="E:/repo/UCOSII_STM32/User/inc"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"/>
+					<Add directory="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 ucos_stm32.elf/fast"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ucos_stm32.bin">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 ucos_stm32.bin"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="flash">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 flash"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="openocd">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 openocd"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="readelf">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 readelf"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/repo/UCOSII_STM32/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/myinstall/CLion 2023.2.2/bin/mingw/bin/mingw32-make.exe -f &quot;E:/repo/UCOSII_STM32/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/repo/UCOSII_STM32/Cfg/app_hooks.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Ports/src/os_cpu_a.asm">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Ports/src/os_cpu_c.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_core.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_dbg_r.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_flag.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_mbox.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_mem.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_mutex.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_q.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_sem.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_task.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_time.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/Source/os_tmr.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/NVIC.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/QLMonitor.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/clock_config.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/gpio.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/iic.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/main.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/mpu6050.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/pwm.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/rev.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/task.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/src/uart.c">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/User/startup_stm32f401xe.s">
+			<Option target="ucos_stm32.elf"/>
+		</Unit>
+		<Unit filename="E:/repo/UCOSII_STM32/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

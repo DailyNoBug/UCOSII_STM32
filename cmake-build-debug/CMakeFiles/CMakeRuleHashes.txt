@@ -1,0 +1,5 @@
+# Hashes of file build rules.
+646749831aabd769a148b2cc432d6943 CMakeFiles/flash
+58efd0cf530633445101ba674b676d11 CMakeFiles/openocd
+affd67a85e3703fcdacacd155bd23ef5 CMakeFiles/readelf
+b767597fe57b60500d000ba784d8cd4c CMakeFiles/ucos_stm32.bin

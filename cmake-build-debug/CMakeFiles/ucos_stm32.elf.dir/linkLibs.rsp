@@ -1,0 +1,1 @@
+ -Wl,-Map=ucos_stm32.map -Wl,--gc-sections -Wl,--print-memory-usage -Wl,-lc -lm -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

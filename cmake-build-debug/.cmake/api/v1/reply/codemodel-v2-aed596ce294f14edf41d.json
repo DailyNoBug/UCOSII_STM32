@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.10"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ucos_stm32",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "flash::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-flash-Debug-a87c91c4a10b7c666312.json",
+					"name" : "flash",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "openocd::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-openocd-Debug-50a730a2b8a77641beef.json",
+					"name" : "openocd",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "readelf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-readelf-Debug-cac1d0ec5ec7e8b41192.json",
+					"name" : "readelf",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ucos_stm32.bin::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ucos_stm32.bin-Debug-94f06e2f1dd526901c2d.json",
+					"name" : "ucos_stm32.bin",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ucos_stm32.elf::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ucos_stm32.elf-Debug-39eb9acc89a4c4eacfa2.json",
+					"name" : "ucos_stm32.elf",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "E:/repo/UCOSII_STM32/cmake-build-debug",
+		"source" : "E:/repo/UCOSII_STM32"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

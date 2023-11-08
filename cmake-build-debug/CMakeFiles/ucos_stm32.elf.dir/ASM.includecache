@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/repo/UCOSII_STM32/Ports/src/os_cpu_a.asm
+
+E:/repo/UCOSII_STM32/User/startup_stm32f401xe.s
+
